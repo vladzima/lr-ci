@@ -9,7 +9,7 @@ Uses [oclif](https://github.com/oclif) so _:love:_ naturally.
 ## Installation
 
 ```
-npm install -g @egcli/lr
+npm install -g linear-cli-x
 ```
 
 ###### Setup API key
@@ -39,87 +39,95 @@ lr init
 - [`lr workspace:current`](#lr-workspacecurrent)
 - [`lr workspace:switch`](#lr-workspaceswitch)
 
-### `lr cache:refresh`
+## `lr cache:refresh`
 
 Refresh the cache
 
 ```
-lr cache:refresh
+USAGE
+  $ lr cache:refresh
 ```
 
-### `lr cache:show`
+## `lr cache:show`
 
 Print the cache file
 
 ```
-lr cache:show
+USAGE
+  $ lr cache:show
 
 OPTIONS
   -p, --pretty  Pretty print
 ```
 
-### `lr config:delete`
+## `lr config:delete`
 
 ```
-lr config:delete
+USAGE
+  $ lr config:delete
 ```
 
-### `lr config:show`
+## `lr config:show`
 
 ```
-lr config:show
+USAGE
+  $ lr config:show
 ```
 
-### `lr init`
+## `lr init`
 
 Setup the Linear cli
 
 ```
-lr init
+USAGE
+  $ lr init
 ```
 
-### `lr issue ISSUEID`
+## `lr issue ISSUEID`
 
 Show issue info
 
 ```
-lr issue ISSUEID
+USAGE
+  $ lr issue ISSUEID
 
 OPTIONS
   -c, --comments     Show issue comments
   -d, --description  Show issue description
-  -o, --open         Open issue in browser
+  -o, --open         Open issue in web browser
 
 ALIASES
-  lr i
+  $ lr i
 
 EXAMPLES
-  lr issue LIN-14
-  lr issue LIN 14
-  lr issue 14 (looks in default team)
+  $ lr issue LIN-14
+  $ lr issue LIN 14
+  $ lr issue 14 (looks in default team)
 ```
 
-### `lr issue:create`
+## `lr issue:create`
 
 Create a new issue
 
 ```
-lr issue:create
+USAGE
+  $ lr issue:create
 
 OPTIONS
   -c, --copy  Copy issue url to clipboard after creating
 
 ALIASES
-  lr create
-  lr c
+  $ lr create
+  $ lr c
 ```
 
-### `lr issue:list`
+## `lr issue:list`
 
 List issues
 
 ```
-lr issue:list
+USAGE
+  $ lr issue:list
 
 OPTIONS
   -a, --all               List issues from all teams
@@ -137,100 +145,108 @@ OPTIONS
   --sort=sort             [default: -status] property to sort by (prepend '-' for descending)
 
 ALIASES
-  lr list
-  lr ls
-  lr l
+  $ lr list
+  $ lr ls
+  $ lr l
 ```
 
-### `lr issue:search [QUERY]`
+## `lr issue:search [QUERY]`
 
-Searches for a string in all issues fields.
+describe the command here
 
 ```
-lr issue:search [QUERY]
+USAGE
+  $ lr issue:search [QUERY]
 
 ALIASES
-  lr search
-  lr s
+  $ lr search
+  $ lr s
 ```
 
-### `lr issue:start ISSUEID`
+## `lr issue:start ISSUEID`
 
 Change status of issue to "In progress" and assign to yourself.
 
 ```
-lr issue:start ISSUEID
+USAGE
+  $ lr issue:start ISSUEID
 
 OPTIONS
   -c, --copy-branch  copy git branch to clip-board
 
 ALIASES
-  lr start
-  lr s
+  $ lr start
+  $ lr s
 ```
 
-### `lr issue:stop ISSUEID`
+## `lr issue:stop ISSUEID`
 
 Return issue to preview state
 
 ```
-lr issue:stop ISSUEID
+USAGE
+  $ lr issue:stop ISSUEID
 
 OPTIONS
   -u, --unassign  Unassign issue from yourself
 
 ALIASES
-  lr stop
+  $ lr stop
 ```
 
-### `lr issue:update ISSUEID`
+## `lr issue:update ISSUEID`
 
 Update an issue
 
 ```
-lr issue:update ISSUEID
+USAGE
+  $ lr issue:update ISSUEID
 
 OPTIONS
   -p, --property=title|description|status  Property to modify
 
 ALIASES
-  lr update
-  lr u
+  $ lr update
+  $ lr u
 ```
 
-### `lr teams:show`
+## `lr teams:show`
 
 Show teams in this workspace
 
 ```
-lr teams:show
+USAGE
+  $ lr teams:show
 
 OPTIONS
   -m, --mine  Pretty print
 ```
 
-### `lr workspace:add`
+## `lr workspace:add`
 
 Add a new workplace
 
 ```
-lr workspace:add
+USAGE
+  $ lr workspace:add
 ```
 
-### `lr workspace:current`
+## `lr workspace:current`
 
 Print current workspace
 
 ```
-lr workspace:current
+USAGE
+  $ lr workspace:current
 ```
 
-### `lr workspace:switch`
+## `lr workspace:switch`
 
 Switch to another workspace
 
 ```
-lr workspace:switch
+USAGE
+  $ lr workspace:switch
 ```
 
 <!-- commandsstop -->
