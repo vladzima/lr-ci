@@ -152,7 +152,7 @@ ALIASES
 
 ## `lr issue:search [QUERY]`
 
-describe the command here
+Search issues
 
 ```
 USAGE

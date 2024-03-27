@@ -8,13 +8,10 @@ inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'))
 
 type SearchedIssue = IssueSearchQuery['issueSearch']['nodes'][0];
 
-/**
- * TODO: Debounce requests when searching
- */
 export default class IssueSearch extends Command {
   static aliases = ['search', 's'];
 
-  static description = 'describe the command here';
+  static description = 'Search issues';
 
   static args = [{ name: 'query' }];
 
@@ -34,7 +31,7 @@ export default class IssueSearch extends Command {
           }
 
           const issues = await this.linear.query.searchIssues(input, { noSpinner: true });
-          return issues?.map((issue) => ({
+          return issues?.map(issue => ({
             name: `${issue.identifier} - ${issue.title}`,
             value: issue,
           }));
@@ -60,11 +57,11 @@ export default class IssueSearch extends Command {
       issues,
       {
         identifier: {
-          get: (issue) => issue.identifier,
+          get: issue => issue.identifier,
         },
         title: {
           header: 'Status',
-          get: (issue) => issue.title,
+          get: issue => issue.title,
         },
       },
       {
